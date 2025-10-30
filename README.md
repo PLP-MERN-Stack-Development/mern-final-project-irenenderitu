@@ -12,10 +12,11 @@ SafeReport provides a safe space for women to report harassment incidents withou
 
 ## Live Application
 Deployed Application: SafeReport Live Demo
+https://mern-final-project-irenenderitu.vercel.app/
 
 ## Video Demonstration
 Watch the 5-minute demo video
-Note: Replace with your actual video link
+[Note: Replace with your actual video link](https://www.canva.com/design/DAG3S39C-Ag/TFEUjBaFNTKOrtv1d50UEA/edit?utm_content=DAG3S39C-Ag&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Setup Instructions
 
