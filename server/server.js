@@ -1,16 +1,28 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// ✅ Secure and explicit CORS setup
+app.use(cors({
+  origin: 'https://mern-final-project-irenenderitu.vercel.app', // your deployed frontend
+  credentials: true, // allow cookies / tokens
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+
+// ✅ handle preflight OPTIONS requests
+app.options('*', cors());
+
+// ✅ other middlewares
 app.use(express.json());
+app.use(cookieParser());
 app.use('/uploads', express.static('uploads'));
 
-// Add these root routes:
+// ✅ Root routes
 app.get('/', (req, res) => {
   res.json({ 
     message: 'SafeReport API Server is running!',
@@ -31,7 +43,7 @@ app.get('/api', (req, res) => {
   });
 });
 
-// Test route for API health check
+// ✅ Health check route
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK',
@@ -40,16 +52,16 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Routes
+// ✅ API routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/reports', require('./routes/reports'));
 
-// Database connection
+// ✅ Database connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/harassment-reporting')
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => console.error('❌ MongoDB connection error:', err));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
