@@ -10,7 +10,6 @@ import Dashboard from './pages/Dashboard';
 import ReportIncident from './pages/ReportIncident';
 import MyReports from './pages/MyReports';
 import Admin from './pages/Admin';
-
 // Set axios base URL from environment variables
 axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
