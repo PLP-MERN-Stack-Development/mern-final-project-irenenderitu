@@ -12,10 +12,11 @@ import MyReports from './pages/MyReports';
 import Admin from './pages/Admin';
 
 // Set axios base URL from environment variables
+// Change from:
 axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
-// ✅ allow cross-origin cookies and authentication headers
-axios.defaults.withCredentials = true;
+// To:
+axios.defaults.baseURL = 'https://mern-final-project-irenenderitu.onrender.com/api';
 
 function App() {
   const [user, setUser] = useState(null);
