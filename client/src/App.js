@@ -18,6 +18,7 @@ axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000
 // axios.defaults.withCredentials = true;
 axios.defaults.baseURL = 'https://mern-final-project-irenenderitu.onrender.com/api';
 
+
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
