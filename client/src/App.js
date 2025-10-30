@@ -13,10 +13,15 @@ import Admin from './pages/Admin'; // Counselors will use this page
 
 // Set axios base URL
 // In your API config file
-// This will use the Render URL in production build
-axios.defaults.baseURL = process.env.NODE_ENV === 'production' 
-  ? 'https://mern-final-project-irenenderitu.onrender.com/api'
-  : 'http://localhost:5000/api';
+// Set axios base URL
+axios.defaults.baseURL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://mern-final-project-irenenderitu.onrender.com/api'
+    : 'http://localhost:5000/api';
+
+// ✅ allow cross-origin cookies and authentication headers
+axios.defaults.withCredentials = true;
+
 
 function App() {
   const [user, setUser] = useState(null);
