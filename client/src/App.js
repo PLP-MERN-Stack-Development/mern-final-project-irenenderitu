@@ -17,7 +17,7 @@ axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000
 // ✅ allow cross-origin cookies and authentication headers
 // axios.defaults.withCredentials = true;
 axios.defaults.baseURL = 'https://mern-final-project-irenenderitu.onrender.com/api';
-
+console.log('🚨 HARDCODED URL:', axios.defaults.baseURL);
 
 function App() {
   const [user, setUser] = useState(null);
