@@ -41,7 +41,7 @@ const Register = ({ onLogin }) => {
 
     try {
       const { confirmPassword, ...submitData } = formData;
-      const res = await axios.post('api/auth/register', submitData);
+      const res = await axios.post('https://mern-final-project-irenenderitu.onrender.com/api/auth/register', submitData);
       
       onLogin(res.data.token, res.data.user);
       navigate('/dashboard');
