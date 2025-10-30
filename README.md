@@ -1,4 +1,4 @@
-# SafeReport - Anonymous Harassment Reporting Platform
+# SafeReport - Anonymous Harassment Reporting Platform (MVP)
 
 ## Project Description
 SafeReport provides a safe space for women to report harassment incidents without fear of exposure or retaliation. The platform ensures complete anonymity while connecting users with essential support resources, legal aid, and counseling services.
