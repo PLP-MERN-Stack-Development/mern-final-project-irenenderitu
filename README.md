@@ -27,8 +27,6 @@ Note: Replace with your actual video link
 1. Clone the repository
 ```bash
 git clone https://github.com/PLP-MERN-Stack-Development/mern-final-project-irenenderitu
-cd safereport
-```
 
 2. Install dependencies
 ```bash
