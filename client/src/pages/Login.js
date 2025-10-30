@@ -27,7 +27,7 @@ const Login = ({ onLogin }) => {
     setLoading(true);
 
     try {
-      const endpoint = isLogin ? '/auth/login' : '/auth/register';
+      const endpoint = isLogin ? 'api/auth/login' : 'api/auth/register';
       const res = await axios.post(endpoint, formData);
       
       onLogin(res.data.token, res.data.user);
