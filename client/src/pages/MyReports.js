@@ -145,7 +145,7 @@ const MyReports = ({ user }) => {
                       {report.evidence.map((file, index) => (
                         <a 
                           key={index} 
-                          href={`http://localhost:5000/${file}`} 
+                          href={`https://mern-final-project-irenenderitu.onrender.com/${file}`} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           style={styles.evidenceLink}

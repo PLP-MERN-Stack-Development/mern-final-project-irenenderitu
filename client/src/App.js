@@ -15,7 +15,7 @@ import Admin from './pages/Admin'; // Counselors will use this page
 // In your API config file
 // This will use the Render URL in production build
 axios.defaults.baseURL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-render-app.onrender.com/api'
+  ? 'https://mern-final-project-irenenderitu.onrender.com/api'
   : 'http://localhost:5000/api';
 
 function App() {
