@@ -1,52 +1,77 @@
-# MERN Stack Capstone Project
+# SafeReport - Anonymous Harassment Reporting Platform
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+## Project Description
+SafeReport provides a safe space for women to report harassment incidents without fear of exposure or retaliation. The platform ensures complete anonymity while connecting users with essential support resources, legal aid, and counseling services.
 
-## Assignment Overview
+## Key Features
+- 100% Anonymous Reporting - Submit incidents without revealing personal identity
+- Secure & Encrypted - All data is protected with enterprise-grade security
+- Support Network Access - Connect with counselors and legal resources
+- Location Safety Mapping - Identify and avoid harassment hotspots
+- Emergency Resources - Immediate access to crisis helplines and support
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+## Live Application
+Deployed Application: SafeReport Live Demo
 
-## Getting Started
+## Video Demonstration
+Watch the 5-minute demo video
+Note: Replace with your actual video link
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+## Setup Instructions
 
-## Files Included
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+### Installation Steps
+1. Clone the repository
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/mern-final-project-irenenderitu
+cd safereport
+```
 
-## Requirements
+2. Install dependencies
+```bash
+npm install
+```
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+3. Start the development server
+```bash
+npm start
+```
 
-## Project Ideas
+4. Open your browser
+Navigate to http://localhost:3000 to view the application
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+### Available Scripts
+- npm start - Runs the app in development mode
+- npm test - Launches the test runner
+- npm run build - Builds the app for production
+- npm run eject - Ejects from Create React App (one-way operation)
 
-## Submission
+## Screenshots
+- Landing Page - Clean, responsive landing page with clear call-to-action buttons
+- Reporting Interface - Secure and intuitive incident reporting form
+- Support Resources - Access to emergency contacts and support services
+- Mobile View - Fully responsive design optimized for mobile devices
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## Technology Stack
+- Frontend: React.js, React Router
+- Styling: Inline CSS with responsive design
+- State Management: React Hooks
+- Deployment: Vercel/Netlify (recommended)
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+## Security Features
+- No personal identity requirements
+- Encrypted data transmission
+- Secure authentication system
+- Privacy-first design principles
 
-## Resources
+## Target Audience
+- Women experiencing harassment in public spaces
+- Students facing campus harassment
+- Workplace harassment victims
+- Anyone seeking anonymous reporting options
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+## Contributing
+We welcome contributions! Please feel free to submit pull requests or open issues for bugs and feature requests.
