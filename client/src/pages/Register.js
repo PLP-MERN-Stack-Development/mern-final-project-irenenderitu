@@ -41,17 +41,27 @@ const Register = ({ onLogin }) => {
 
     try {
       const { confirmPassword, ...submitData } = formData;
+      
+      // Debug logging
+      console.log('Making request to:', axios.defaults.baseURL + '/auth/register');
+      console.log('Data:', submitData);
+      
+      // FIX: Use the correct endpoint path
       const res = await axios.post('/auth/register', submitData);
       
+      console.log('Registration successful:', res.data);
       onLogin(res.data.token, res.data.user);
       navigate('/dashboard');
     } catch (error) {
-      setError(error.response?.data?.message || 'Something went wrong');
+      console.error('Registration error:', error);
+      console.error('Error response:', error.response);
+      setError(error.response?.data?.message || 'Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
+  // ... rest of your component remains the same
   return (
     <div style={styles.container}>
       <div style={styles.card}>
@@ -79,8 +89,6 @@ const Register = ({ onLogin }) => {
               required
               style={styles.input}
               placeholder="Enter your full name"
-              onFocus={(e) => e.target.style.borderColor = '#007bff'}
-              onBlur={(e) => e.target.style.borderColor = '#ddd'}
             />
           </div>
 
@@ -94,8 +102,6 @@ const Register = ({ onLogin }) => {
               required
               style={styles.input}
               placeholder="Enter your email address"
-              onFocus={(e) => e.target.style.borderColor = '#007bff'}
-              onBlur={(e) => e.target.style.borderColor = '#ddd'}
             />
           </div>
 
@@ -108,8 +114,6 @@ const Register = ({ onLogin }) => {
               onChange={handleChange}
               style={styles.input}
               placeholder="Enter your phone number (optional)"
-              onFocus={(e) => e.target.style.borderColor = '#007bff'}
-              onBlur={(e) => e.target.style.borderColor = '#ddd'}
             />
           </div>
 
@@ -121,8 +125,6 @@ const Register = ({ onLogin }) => {
               onChange={handleChange}
               style={styles.select}
               required
-              onFocus={(e) => e.target.style.borderColor = '#007bff'}
-              onBlur={(e) => e.target.style.borderColor = '#ddd'}
             >
               <option value="user">Regular User</option>
               <option value="counselor">Counselor/Support Staff</option>
@@ -145,8 +147,6 @@ const Register = ({ onLogin }) => {
               style={styles.input}
               placeholder="Create a password (min. 6 characters)"
               minLength="6"
-              onFocus={(e) => e.target.style.borderColor = '#007bff'}
-              onBlur={(e) => e.target.style.borderColor = '#ddd'}
             />
           </div>
 
@@ -161,8 +161,6 @@ const Register = ({ onLogin }) => {
               style={styles.input}
               placeholder="Confirm your password"
               minLength="6"
-              onFocus={(e) => e.target.style.borderColor = '#007bff'}
-              onBlur={(e) => e.target.style.borderColor = '#ddd'}
             />
           </div>
           
@@ -201,6 +199,7 @@ const Register = ({ onLogin }) => {
   );
 };
 
+// ... your styles remain the same
 const styles = {
   container: {
     display: 'flex',
@@ -316,31 +315,8 @@ const styles = {
     padding: 0,
     margin: 0,
     color: '#155724'
-  },
-  privacyList: {
-    padding: '0.5rem 0',
-    fontSize: '0.9rem',
-    position: 'relative',
-    paddingLeft: '1.5rem'
   }
 };
 
-// Add custom styles for privacy list checkmarks
-const privacyListStyle = `
-  [style*="paddingLeft: 1.5rem"]:before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #28a745;
-    font-weight: bold;
-  }
-`;
-
-// Inject styles
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.textContent = privacyListStyle;
-  document.head.appendChild(style);
-}
-
+// Remove the custom style injection at the bottom as it's causing issues
 export default Register;
