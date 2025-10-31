@@ -9,6 +9,10 @@ SafeReport provides a safe space for women to report harassment incidents withou
 - Support Network Access - Connect with counselors and legal resources
 - Location Safety Mapping - Identify and avoid harassment hotspots
 - Emergency Resources - Immediate access to crisis helplines and support
+## Future upgrade
+- Twilio sms text via phone
+- Email verification
+- Map cordinates
 
 ## Live Application
 Deployed Application: SafeReport Live Demo
